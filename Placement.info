@@ -1,0 +1,7 @@
+﻿<Placement>
+    <Place Fields_Shape="Content:5" />
+    <Place Fields_Shape_Edit="Content:5" />
+    <Match DisplayType="SummaryAdmin">
+        <Place Fields_Shape="-" />
+    </Match>
+</Placement>

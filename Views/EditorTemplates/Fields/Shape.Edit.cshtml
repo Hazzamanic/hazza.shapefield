@@ -1,0 +1,24 @@
+﻿@model Hazza.ShapeField.Fields.ShapeField
+
+@{
+    Script.Require("jQuery").AtFoot();
+    var readUrl = Url.Action("TestShape", "Shaper", new { Area = "Hazza.ShapeField" });
+}
+
+<fieldset>
+    @Html.LabelFor(m => m.Value, @T("Shape"))
+    @Html.EditorFor(m => m.Value)
+    <p class="hint">Name of the shape you want to display, beware that if this shape does not exist you will get an ugly yellow page of death</p>
+</fieldset>
+
+@using (Script.Foot()) {
+    <script type="text/javascript">
+        $(".pew").click(function() {
+            $.getJSON('@readUrl', {
+                    shape: "anal"
+                }).done( function(data) {
+                $('#testy').html(data);
+            });
+        });
+    </script>
+}

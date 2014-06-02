@@ -11,14 +11,15 @@
     <p class="hint">Name of the shape you want to display, beware that if this shape does not exist you will get an ugly yellow page of death</p>
 </fieldset>
 
+@* broken...for now
 @using (Script.Foot()) {
     <script type="text/javascript">
         $(".pew").click(function() {
             $.getJSON('@readUrl', {
-                    shape: "anal"
+                    shape: "test"
                 }).done( function(data) {
                 $('#testy').html(data);
             });
         });
     </script>
-}
+}*@
